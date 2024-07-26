@@ -35,3 +35,4 @@ dist/
 # Ignore dependency directories
 node_modules/
 vendor/
+.terraform/
