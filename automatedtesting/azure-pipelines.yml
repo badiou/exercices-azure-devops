@@ -9,7 +9,7 @@ stages:
     - script: 'sudo npm install -g newman'
       displayName: 'Install Newman'
       
-    - script: 'ls -la $(System.DefaultWorkingDirectory)/automatedtesting'
+    - script: 'ls -la $(System.DefaultWorkingDirectory)/automatedtesting/postman'
       displayName: 'List files in working directory'
 
     - script: 'sudo newman run $(System.DefaultWorkingDirectory)/automatedtesting/postman/DataValidationTestStarterAPIspostman_collection.json'
