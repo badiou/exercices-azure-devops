@@ -1,0 +1,37 @@
+# Ignore Terraform state files
+*.tfstate
+*.tfstate.*
+
+# Ignore Terraform variable files
+*.tfvars
+
+# Ignore Terraform provider files
+.terraform/
+
+# Ignore Terraform plan files
+*.tfplan
+
+# Ignore backup files created by Terraform
+*.backup
+
+# Ignore crash log files created by Terraform
+crash.log
+
+# Ignore any sensitive files (add your own patterns as needed)
+*.pem
+*.key
+
+# General system and editor files
+.DS_Store
+Thumbs.db
+
+# Ignore logs
+*.log
+
+# Ignore build directories
+build/
+dist/
+
+# Ignore dependency directories
+node_modules/
+vendor/
