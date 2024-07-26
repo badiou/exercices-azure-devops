@@ -10,7 +10,7 @@ stages:
       displayName: Install newman runner
       inputs:
         script: 'sudo npm install -g newman'
-        workingDirectory: ${System.DefaultWorkingDirectory}/automatedtesting
+        workingDirectory: ${System.DefaultWorkingDirectory}
 
     - task: CmdLine@2
       displayName: Run newman test
