@@ -4,7 +4,7 @@ from selenium.webdriver.chrome.options import Options as ChromeOptions
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-
+import time
 # Configure logging
 logging.basicConfig(
     filename='selenium.log',
@@ -63,4 +63,6 @@ def login(user, password):
 if __name__ == "__main__":
     driver = login('standard_user', 'secret_sauce')
     #input("Press Enter to close the browser...")
+    time.sleep(5)  # Wait for 5 seconds
+    # Close the browser
     driver.quit()
