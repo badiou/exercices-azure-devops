@@ -11,12 +11,12 @@ stages:
       
     - script: 'ls -la $(System.DefaultWorkingDirectory)/automatedtesting/postman'
       displayName: 'List files in working directory'
-    - script: 'sudo newman run $(System.DefaultWorkingDirectory)/automatedtesting/starterapis.json'
-      displayName: 'Data validation Tests'
-    # - script: 'sudo newman run $(System.DefaultWorkingDirectory)/automatedtesting/postman/DataValidationTestStarterAPIspostman_collection.json'
+    # - script: 'sudo newman run $(System.DefaultWorkingDirectory)/automatedtesting/starterapis.json'
     #   displayName: 'Data validation Tests'
+    - script: 'sudo newman run $(System.DefaultWorkingDirectory)/automatedtesting/postman/DataValidationTestStarterAPIspostman_collection.json'
+      displayName: 'Data validation Tests'
 
-    # - script: 'sudo newman run $(System.DefaultWorkingDirectory)/automatedtesting/postman/RegressionTestStarterAPIspostman_collection.json'
-    #   displayName: 'Regression Tests'
+    - script: 'sudo newman run $(System.DefaultWorkingDirectory)/automatedtesting/postman/RegressionTestStarterAPIspostman_collection.json'
+      displayName: 'Regression Tests'
     
     
