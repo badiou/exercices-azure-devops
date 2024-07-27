@@ -20,4 +20,15 @@ stages:
     - script: 'sudo newman run $(System.DefaultWorkingDirectory)/postman/RegressionTestStarterAPIspostman_collection.json -e $(System.DefaultWorkingDirectory)/postman/Test.environment.json'
       displayName: 'Regression Tests'
     
+    - script: |
+        sudo apt-get update
+        sudo apt-get install -y openjdk-11-jdk
+        wget https://archive.apache.org/dist/jmeter/binaries/apache-jmeter-5.4.1.tgz
+        tar -xzf apache-jmeter-5.4.1.tgz
+        sudo mv apache-jmeter-5.4.1 /opt/jmeter
+      displayName: 'Install JMeter'
+    
+    - script: |
+        /opt/jmeter/bin/jmeter -n -t $(System.DefaultWorkingDirectory)/jmeter/FinishEnduranceTest.jmx -l $(System.DefaultWorkingDirectory)/Jmeter/results.jtl
+      displayName: 'Run JMeter Test'
     
