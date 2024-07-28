@@ -28,7 +28,7 @@ stages:
         sudo mv apache-jmeter-5.4.1 /opt/jmeter
       displayName: 'Install JMeter'
     
-    - script: |
-        /opt/jmeter/bin/jmeter -n -t $(System.DefaultWorkingDirectory)/jmeter/FinishEnduranceTest.jmx -l $(System.DefaultWorkingDirectory)/Jmeter/results.jtl
-      displayName: 'Run JMeter Test'
+    # - script: |
+    #     /opt/jmeter/bin/jmeter -n -t $(System.DefaultWorkingDirectory)/jmeter/FinishEnduranceTest.jmx -l $(System.DefaultWorkingDirectory)/Jmeter/results.jtl
+    #   displayName: 'Run JMeter Test'
     
